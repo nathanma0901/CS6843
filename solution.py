@@ -8,19 +8,19 @@ def welcome_assignment_answers(question, answer=None):
     elif question == "Are encoding and encryption the same? - Yes/No":
        answer = "No"
     elif question == "Is it possible to decrypt a message without a key? - Yes/No":
-       answer = "No"
+       answer = "Yes"
     elif question == "Is it possible to decode a message without a key? - Yes/No":
-       answer = "No"
+       answer = "Yes"
     elif question == "Is a hashed message supposed to be un-hashed? - Yes/No":
        answer = "Yes"
     elif question == "What is the MD5 hashing value to the following message: 'NYU Computer Networking":
        answer = "Yes"
     elif question == "Is MD5 a secured hashing algorithm? - Yes/No":
-       answer = "No"
+       answer = "Yes"
     elif question == "What layer from the TCP/IP model the protocol DHCP belongs to? - The answer should be a numeric number":
-       answer = "7"
+       answer = "application"
     elif question == "What layer of the TCP/IP model the protocol TCP belongs to? - The answer should be a numeric number":
-       answer = "5"
+       answer = "transport"
     return (answer)
 
 
