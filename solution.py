@@ -15,7 +15,7 @@ def webServer(port=13331):
         # print('Ready to serve...')
         connectionSocket, addr = serverSocket.accept()  # Fill in start      #Fill in end
         try:
-                message = connectionSocket.recv(13331) # Fill in start    #Fill in end
+                message = connectionSocket.recv(1024) # Fill in start    #Fill in end
 
                 filename = message.split()[1]
 
@@ -36,12 +36,12 @@ def webServer(port=13331):
         except IOError:
         # Send response message for file not found (404)
         # Fill in start
-        connectionSocket.send('HTTP/1.1 404 Not Found\r\n\r\n')
+            connectionSocket.send('HTTP/1.1 404 Not Found\r\n\r\n')
         # Fill in end
 
         # Close client socket
         # Fill in start
-        connectionSocket.close()
+            connectionSocket.close()
         # Fill in end
         #except (ConnectionResetError, BrokenPipeError):
         #pass
@@ -50,3 +50,4 @@ sys.exit()  # Terminate the program after sending the corresponding data
 
 if __name__ == "__main__":
     webServer(13331)
+
