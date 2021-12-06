@@ -12,6 +12,7 @@ def smtp_client(port=1025, mailserver='localhost'):
    clientSocket = socket(AF_INET, SOCK_STREAM)
    clientSocket.connect(mailserver, port)
    # Fill in end
+
    recv = clientSocket.recv(1024).decode()
    print(recv)
    if recv[:3] != '220':
@@ -29,6 +30,7 @@ def smtp_client(port=1025, mailserver='localhost'):
    # Fill in start
    mailfrom = 'Mail from: <lm3562@nyu.edu>\r\n'
    clientsocket.send(mailfrom.encode())
+   recv1 = clientSocket.recv(1024).decode()
    # Fill in end
 
    # Send RCPT TO command and print server response.
@@ -64,4 +66,3 @@ def smtp_client(port=1025, mailserver='localhost'):
 
 if __name__ == '__main__':
    smtp_client(1025, 'localhost')
-
