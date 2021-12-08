@@ -43,8 +43,8 @@ def webServer(port=13331):
         # Fill in start
                 connectionSocket.close()
         # Fill in end
-        #except (ConnectionResetError, BrokenPipeError):
-        #pass
+        except (ConnectionResetError, BrokenPipeError):
+            pass
     serverSocket.close()
     sys.exit()  # Terminate the program after sending the corresponding data
 
